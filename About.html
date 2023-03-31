@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: 0px;
+        }
+        .con{
+            width: 100%;
+            height: 65.5vh;
+           background-color: red;
+
+        }
+        .div1{
+            width: 45%;
+            height: 60vh;
+            display: flex;
+            position: absolute;
+            border: 5px solid yellow;
+            background-color:red;
+            transform: skewX(-10deg);
+            top: 20px;
+            left: 40px;
+
+        }
+        .div2{
+            width: 45%;
+            height: 60vh;
+            display: flex;
+            position: absolute;
+            border: 5px solid yellow;
+            background-color:red;
+            transform: skewX(-10deg);
+            top: 20px;
+            right: 40px;
+        }
+        .slider1{
+            overflow: hidden;
+            background-size: cover;
+        }
+        .slider2{
+            background-size:cover;
+            overflow: hidden;
+          
+        }
+        footer{
+            background-color: rgb(116, 228, 11);
+            height: 34vh;
+            padding-top: 2px;
+            word-spacing:5px;
+            color:green;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .a1{
+            width: 32.8%;
+            height:33vh;
+            border: 3px solid red;
+            font-size: 20px;
+            /* background-image: url("5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background-color: black;
+            color: white;
+            line-height: 35px;
+            padding-left: 5px;
+
+        }
+        .a2{
+            width: 32.8%;
+            height:33vh;
+            border: 3px solid yellow;
+            font-size: 20px;
+            /* background-image: url("4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background-color: black;
+            color: white;
+            line-height: 35px;
+            padding-left: 5px;
+            
+
+          
+            
+
+            
+
+        }
+        .a3{
+            width: 32.8%;
+            height:33vh;
+            border: 3px solid red;
+            font-size: 20px;
+            /* background-image: url("1.jpg"); */
+            /* background-repeat: no-repeat;
+            background-size: cover; */
+            background-color: black;
+            color: white;
+            line-height: 35px;
+            padding-left: 5px;
+            justify-self: center;
+            
+        
+            
+        }
+        .a1:hover{
+            background-color:black;
+        }
+        .a2:hover{
+            background-color:black;
+        }
+        .a3:hover{
+            background-color:black;
+        }
+
+        
+       
+       
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="div1"><img src="1.jpg" class="slider1" id="slide"></div>
+        <div class="div2"><img src="3.jpg" class="slider1" id="slide"></div>
+    </div>
+    <footer class="footer">
+        <div class="a1">
+            <h1 style="color: cornflowerblue;">Support:-</h1>
+            <li>Contact Us</li>
+            <li>FAQ</li>
+            <li>Products Reg</li>
+            <li>Locate A Deader</li>
+            <li>Shipping Info</li>
+        </div>
+        <div class="a2">
+            <h1 style="color: darkcyan;">Quick Links:-</h1>
+            <li>Gift Cards</li>
+            <li>Review</li>
+            <li>My Account</li>
+            <li>Size Guide</li>
+            <li>Website Builder</li>
+            
+
+        </div>
+        <div class="a3">
+            <h1 style="color: darkturquoise;">Address:-</h1>
+            <li>Phone: +9767475332</li>
+            <li>Email: food@gmail.com</li>
+            <li>Address: Pune Food Factory,Sr No.36/2 Plot No.25,Near Ramchandra Sabhagruh,opposite to Viva Girls Hostel,Pune,Maharastra 411014 </li>
+        </div>
+    </footer>
+</body>
+<script>
+    let arr=['1.jpg','3.jpg','4.jpg']
+    let arr2=['3.jpg','4.jpg','1.jpg']
+    let slider1_ref=document.getElementsByClassName("slider1")
+
+    let i=0
+
+    function change_img(){
+        i=i+1
+       if(i>arr.length-1)i=0
+         slider1_ref[0].src=arr[i]
+         slider1_ref[1].src=arr2[i]
+
+    }
+    setInterval(change_img,1000)
+
+</script>
+</html>
